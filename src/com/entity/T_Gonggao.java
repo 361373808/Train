@@ -1,0 +1,50 @@
+package com.entity;
+
+public class T_Gonggao {
+	private int id;
+	private String title;
+	private String content;
+	private String shijian;
+	private int a_id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getShijian() {
+		return shijian;
+	}
+
+	public void setShijian(String shijian) {
+		this.shijian = shijian;
+	}
+
+	public int getA_id() {
+		return a_id;
+	}
+
+	public void setA_id(int a_id) {
+		this.a_id = a_id;
+	}
+
+}

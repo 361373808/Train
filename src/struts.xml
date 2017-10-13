@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="LGAction" class="com.action.UserAction">
+			<result name="userLogout" >/qiantai/index.jsp</result>
+			<result name="ulogin_ok" >/qiantai/index.jsp</result>
+			<result name="ulogin_fail" >/qiantai/index.jsp</result>
+			<result name="alogin_ok" >/admin/index.jsp</result>
+			<result name="alogin_fail" >/login.jsp</result>
+			<result name="u_reg" >/qiantai/index.jsp</result>
+			<result name="a_reg" >/admin/admin/adminMana.jsp</result>
+			<result name="pw_ok" >/admin/index.jsp</result>
+			<result name="um" >/admin/user/userMana.jsp</result>
+			<result name="delete" >/admin/user/userMana.jsp</result>
+			<result name="allche" >/qiantai/checi/checiSerach.jsp</result>
+			<result name="buy" >/qiantai/trainWeb.jsp</result>
+			<result name="cheall" >/qiantai/checi/checiSerach.jsp</result>
+			<result name="show" >/qiantai/gonggao/gonggaoQian5.jsp</result>
+			</action>
+		<action name="ManagerAction" class="com.action.ManagerAction">
+			<result name="am" >/admin/admin/adminMana.jsp</result><!-- 根据返回结果跳转到 adminMana.jsp -->
+			<result name="del" >/admin/admin/adminMana.jsp</result><!-- 根据返回结果跳转到 adminMana.jsp -->
+			<result name="cm" >/admin/checi/checiMana.jsp</result><!-- 根据返回结果跳转到 checiMana.jsp-->
+			<result name="ac" >/admin/checi/checiMana.jsp</result><!-- 根据返回结果跳转到 checiMana.jsp-->
+			<result name="ce" >/admin/checi/checiMana.jsp</result><!-- 根据返回结果跳转到 checiMana.jsp-->
+			<result name="ec" >/admin/checi/checiEditPre.jsp</result>
+			<result name="ec2" >/admin/yuding/chepiaoxinxi.jsp</result>
+			<result name="all" >/admin/yuding/yudingMana.jsp</result>
+			<result name="dc" >/admin/yuding/yudingMana.jsp</result>
+			<result name="sl" >/admin/yuding/yudingMana.jsp</result>
+			<result name="dd" >/admin/yuding/yudingMana.jsp</result>
+			<result name="uxx" >/admin/yuding/userxinxi.jsp</result>
+			<result name="pxx" >/admin/yuding/chepiaoxinxi.jsp</result>
+			<result name="gg" >/admin/gonggao/gonggaoMana.jsp</result>
+			<result name="ggadd" >/admin/gonggao/gonggaoMana.jsp</result>
+			<result name="ly" >/admin/liuyan/liuyanMana.jsp</result>
+			<result name="content" >/admin/gonggao/gonggaoDetail.jsp</result>
+			<result name="delcon" >/admin/gonggao/gonggaoMana.jsp</result>
+			<result name="delliu" >/admin/liuyan/liuyanMana.jsp</result>
+			</action>
+	
+			<action name="PersonalAction"  class="com.action.PersonalAction">
+			<result name="changepw">/auser/index.jsp</result>
+			<result name="pxx">/auser/userinfo/userinfo.jsp</result>
+			<result name="score">/auser/userJifen/userJifen.jsp</result>
+			<result name="userpiao">/auser/yuding/userYudingMy.jsp</result>
+			</action>
+	
+		<action name="getStreamResult" class="com.action.StreamResultAction">
+			<result type="stream">
+				<!-- 指定stream生成的响应数据的类型 -->
+				<param name="contentType">text/html</param>
+				<!-- 指定由getInputStream()方法返回输出的结果 -->
+				<param name="inputStream">
+				<!-- 如果返回输出结果的方法名并非get+属性名的方式，在此处指定正确的方法 --></param>
+			</result>
+		</action>
+	</package>
+</struts>    
